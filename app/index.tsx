@@ -5,10 +5,12 @@ export default function Landing() {
   return (
     <View style={styles.container}>
       <Text>Home</Text>
-      <Link href={{ pathname: "/tracker/[room]", params: { room: "new" } }}>
+      {/* TODO: Buttons with onPress router push */}
+      <Link href={{ pathname: "/game/[room]", params: { room: "new" } }}>
         Start Game
       </Link>
-      <Link href={{ pathname: "/tracker/[room]", params: { room: "HJKL" } }}>
+      {/* TODO: dynamic "Join Game" form -> routing */}
+      <Link href={{ pathname: "/game/[room]", params: { room: "HJKL" } }}>
         Join HJKL
       </Link>
     </View>
