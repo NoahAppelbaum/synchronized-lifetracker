@@ -1,4 +1,5 @@
 import { View, Text } from "react-native";
+import Styles from "./Styles";
 
 export default function LifeAdjustPaddle({
   handleLifeAdjustment,
@@ -9,10 +10,14 @@ export default function LifeAdjustPaddle({
   value: number;
   operator: string;
 }) {
-    return (
-        <View>
-            <Text onPress={()=>handleLifeAdjustment(value)}>{operator}</Text>
-        </View>
-    )
-
+  return (
+    <View>
+      <Text
+        onPress={() => handleLifeAdjustment(value)}
+        style={Styles.adjustPaddle}
+      >
+        {operator}
+      </Text>
+    </View>
+  );
 }
